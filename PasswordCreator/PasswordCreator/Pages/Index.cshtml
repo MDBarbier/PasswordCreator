@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the password generator</h1>
+</div>
+
+<form method="post">
+    <div class="form-group">
+        <label for="length">Desired Password Length?</label>
+        @Html.EditorFor(a => a.passwordDetails.Length)
+    </div>   
+    <div class="checkbox">
+        <label>Include symbols?</label>
+        @Html.EditorFor(a => a.passwordDetails.IncludeSymbols)
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
